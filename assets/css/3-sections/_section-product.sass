@@ -19,14 +19,15 @@
 
 
   &__items-wrap
-    display: flex
-    flex-direction: column
+    // display: flex
+    // flex-direction: column
     margin: 35px 10px 60px
     padding-bottom: 30px
     border-bottom: 1px solid #333
 
   &__item-row
     display: flex
+    justify-content: center
     margin-bottom: 10px
 
     &:last-child
@@ -41,8 +42,13 @@
     justify-content: center
     align-items: center
     position: relative
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+
 
     @media (min-width: 961px)
+      &:hover
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4)
+
       &:hover .product__img
         transform: scale(1.1)
         filter: blur(1px) grayscale(.5)
@@ -62,7 +68,7 @@
 
 
 
-  .col-1
+  &__item.col-1
     max-height: 300px
     margin: 0 5px
 
@@ -81,7 +87,7 @@
 
   &__img
     transition: .3s ease-in-out
-    
+
   &__name,
   &__price
     color: #eee
@@ -116,3 +122,9 @@
 
     @media (max-width: 520px)
       bottom: 0
+
+
+  //  =========== Product =========== Buttons / CTA  ===========
+  .cta
+    max-width: 100%
+    margin: auto 0
