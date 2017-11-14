@@ -1,0 +1,45 @@
+.about
+  background: linear-gradient(to top, #fff 0%,#ddd 100%)
+
+  &__wrap
+    padding: 60px 0
+    // background: pink
+    display: flex
+    flex-direction: row
+
+    @media (max-width: 960px)
+      flex-direction: column
+
+  &__figure
+    // background: red
+    overflow: hidden
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+
+    &:hover
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4)
+
+  &__figure.col-2
+    margin-right: 0
+
+    @media (max-width: 960px)
+      max-width: 100%
+      margin-right: 10px
+      margin-bottom: 10px
+
+  &__img
+    height: 100%
+    margin-left: -180px
+    transition: .3s ease-in-out
+
+    &:hover
+      transform: scale(1.33) rotate(20deg)
+      filter: grayscale(1)
+
+  &__text-wrap
+    background: blue
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+
+
+  &__text-wrap.col-1
+    @media (max-width: 960px)
+      max-width: 100%
