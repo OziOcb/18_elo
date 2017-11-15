@@ -3,20 +3,28 @@
 
   &__wrap
     padding: 60px 0
-    // background: pink
     display: flex
     flex-direction: row
 
     @media (max-width: 960px)
       flex-direction: column
 
+
+  //  =========== About =========== Figure Area  ===========
   &__figure
-    // background: red
     overflow: hidden
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+    position: relative
+    box-shadow: $box-shadow
+    transition: $basic-trans
 
     &:hover
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4)
+      box-shadow: $box-shadow--hover
+
+    // show figure caption after hover
+    &:hover .about__fig-caption
+      opacity: 1
+      pointer-events: none
+      bottom: 3%
 
   &__figure.col-2
     margin-right: 0
@@ -26,20 +34,45 @@
       margin-right: 10px
       margin-bottom: 10px
 
-  &__img
+  &__fig-img
     height: 100%
     margin-left: -180px
-    transition: .3s ease-in-out
+    transition: $basic-trans
 
     &:hover
       transform: scale(1.33) rotate(20deg)
-      filter: grayscale(1)
+      filter: grayscale(.7)
 
+  &__fig-caption
+    position: absolute
+    bottom: -1%
+    left: 5%
+    width: 90%
+    // right: 20px
+    font-size: 2rem
+    line-height: 1.1
+    color: #eee
+    background: $transparent-back
+    padding: 15px
+    text-align: center
+    opacity: 0
+    transition: $basic-trans
+
+
+  //  =========== About =========== Text Area  ===========
   &__text-wrap
-    background: blue
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2)
-
+    position: relative
 
   &__text-wrap.col-1
     @media (max-width: 960px)
       max-width: 100%
+
+  &__title
+    margin-top: -7px
+
+  .cta
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    margin: 0
