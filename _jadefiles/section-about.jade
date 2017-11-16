@@ -1,12 +1,19 @@
 section.about
   .about__wrap.col-3
-    figure.about__figure.col-2 
-      img.about__fig-img(src="/assets/img/products/large_product_12.jpg" alt="Product Description")
-      figcaption.about__fig-caption Lorem ipsum lorem trolem dolor sit amet, <strong>HTC Mobile Phone</strong> consectetur adipisicing elit. Ad, modi.
+    h2.about__title About Us
     
-    .about__text-wrap.col-1
-      h2.about__title Lorem ipsum dolor.
-      p.about__desc Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit.</strong> Modi iusto, ea nam! Quidem pariatur fugit reprehenderit accusamus illo magni saepe repellat neque perspiciatis facere quisquam alias eaque aperiam deserunt modi velit, culpa molestiae ipsam dolor necessitatibus eos sapiente eligendi architecto. 
-        <br><br> 
-        <em>"Quisquam eum tempore nulla esse quod, ad quibusdam laborum aperiam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam cum ullam placeat! Voluptate, quas, esse. Laborum magnam ullam, obcaecati mollitia modi. Illum amet molestias dolorem velit, in quae soluta repudiandae, sunt eius. Omnis et doloribus sint nemo!"</em>
-      a.cta.col-1.cta--orange(href="#") Lorem ipsum dolor.
+    .about__fig-text-wrap
+      figure.about__figure.col-2 
+        picture
+          source(media="(min-width: 961px)" srcset="/assets/img/figures/01/fig-1__large.jpg 1x, /assets/img/figures/01/fig-1__large--2x.jpg 2x")
+          source(media="(min-width: 621px)" srcset="/assets/img/figures/01/fig-2__med.jpg 1x, /assets/img/figures/01/fig-2__med--2x.jpg 2x")
+          source(srcset="/assets/img/figures/01/fig-1__small.jpg 1x, /assets/img/figures/01/fig-1__small--2x.jpg 2x")
+          img.about__fig-img(src="/assets/img/figures/01/fig-1__small.jpg" alt="Product Description")
+        figcaption.about__fig-caption Lorem ipsum lorem trolem dolor sit amet, <strong>HTC Mobile Phone</strong> consectetur adipisicing elit. Ad, modi.
+      
+      .about__text-wrap.col-1
+        h3.about__text-title Lorem ipsum dolor.
+        p.about__text-desc Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit.</strong> Modi iusto, ea nam! Quidem pariatur fugit reprehenderit accusamus illo magni saepe repellat neque perspiciatis facere quisquam alias eaque aperiam deserunt modi velit, culpa molestiae ipsam dolor necessitatibus eos sapiente eligendi architecto. 
+          <br><br> 
+          <em>"Quisquam eum tempore nulla esse quod, ad quibusdam laborum aperiam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam cum ullam placeat! Voluptate, quas, esse. Laborum magnam ullam, obcaecati mollitia modi. Illum amet molestias dolorem velit, in quae soluta repudiandae, sunt eius. Omnis et doloribus sint nemo!"</em>
+        a.cta.col-1.cta--orange(href="#") Lorem ipsum dolor.
