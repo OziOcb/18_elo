@@ -15,9 +15,11 @@
   &__fig-text-wrap
     display: flex
     flex-direction: row
+    margin-bottom: 60px
 
     @media (max-width: 960px)
-      flex-direction: column
+      display: block
+      margin-bottom: 0px
 
   //  =========== About =========== Figure Area  ===========
   &__figure
@@ -27,6 +29,7 @@
     transition: $basic-trans
     display: flex
     justify-content: center
+    align-items: center
 
     &:hover
       box-shadow: $box-shadow--hover
@@ -46,7 +49,7 @@
       margin-bottom: 10px
 
   &__fig-img
-    height: 100%
+    transform: scale(1.02)
     transition: $basic-trans
 
     &:hover
@@ -54,7 +57,7 @@
       filter: grayscale(.7)
 
       @media (max-width: 960px)
-        transform: none
+        transform: scale(1.02)
         filter: none
 
 
@@ -90,7 +93,12 @@
     margin-top: -7px
 
     @media (max-width: 960px)
+      margin-top: 30px
       text-align: center
+
+  &__text-desc
+    @media (max-width: 960px)
+      padding-bottom: 30px
 
   .cta
     position: absolute
