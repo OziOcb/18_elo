@@ -1,9 +1,10 @@
 footer.footer
+  h2.footer__title Contact Information
   .footer__wrapper.col-3
     .footer__icon.col-1
       a(href="#")
         img.footer__img(src="/assets/img/ocb-5.svg" alt="O.C.B Logo")
-        
+
     .footer__links.col-1  
       h3.footer__links-title Links
       ul.footer__links-list
@@ -17,17 +18,18 @@ footer.footer
           a.footer__links-link(href="#") link-Item
         li
           a.footer__links-link(href="#") link-Item
-        
+
     .footer__form.col-1
-      h3.footer__links-title Links
-      ul.footer__links-list
-        li
-          a.footer__links-link(href="#") link-Item
-        li
-          a.footer__links-link(href="#") link-Item
-        li
-          a.footer__links-link(href="#") link-Item
-        li
-          a.footer__links-link(href="#") link-Item
-        li
-          a.footer__links-link(href="#") link-Item
+      form(action="https://example.net/comment.php" method="post" id="footer__form")
+        h3.footer__form-title Formularz
+        p
+          label.element-invisible(for="first-name") First-Name
+          input(class="footer__form-item" type="text" name="first-name" id="first-name" placeholder="Podaj swoje Imie" required)
+        p
+          label.element-invisible(for="surname") Surname
+          input(class="footer__form-item" type="text" name="surname" id="surname" placeholder="Podaj swoje Nazwisko" required)
+        p
+          label.element-invisible(for="email") Email
+          input(class="footer__form-item" type="email" name="email" id="email" placeholder="Podaj swoj e-mail" required)
+        p
+          button(class="footer__form-btn" name="submit" type="submit" id="form-submit") Wyślij

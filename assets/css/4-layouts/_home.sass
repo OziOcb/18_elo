@@ -1,5 +1,6 @@
 html
   box-sizing: border-box
+  position: relative
 
 *, *::after, *::before
   box-sizing: inherit
@@ -11,6 +12,14 @@ html
 
 .main-wrapper
   margin-bottom: 400px
+
+  @media (max-width: 620px)
+    margin-bottom: 700px
+
+.element-invisible
+  position: absolute !important
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px)
 
 //Flex Clases
 .flex
@@ -35,6 +44,9 @@ html
   max-width: 300px
   margin: 0 10px
   flex: 1
+
+  @media (max-width: 620px)
+    max-width: 100%
 
 .col-2
   max-width: 620px

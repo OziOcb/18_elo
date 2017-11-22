@@ -2,15 +2,19 @@
   background: linear-gradient(to top, #fff 0%,#ddd 100%)
 
   &__wrap
-    padding: 60px 0
+    padding: 35px 0
     display: flex
     flex-direction: column
 
   &__title
     text-align: center
-    padding: 30px 0
-    margin: 0  10px 30px
+    padding: 60px 0 30px
+    margin: 0 auto
+    max-width: 920px
     border-bottom: 1px solid #333
+
+    @media (max-width: 960px)
+      margin: 0 10px
 
   &__fig-text-wrap
     display: flex
