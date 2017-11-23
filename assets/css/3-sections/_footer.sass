@@ -5,17 +5,18 @@
   background: #222
   z-index: -1
 
-  &__title
-    +hide-text
+  @media (max-width: 960px)
+    position: static
 
   &__wrapper
     display: flex
     justify-content: center
-    padding: 40px 0
+    padding: 60px 0
+
+    @media (max-width: 960px)
+      padding: 50px 0 20px
 
     @media (max-width: 620px)
-      // flex-direction: column
-      // align-items: center
       display: block
       text-align: center
 
@@ -42,10 +43,16 @@
     margin-top: 0
     font-size: 2rem
 
+    @media (max-width: 960px)
+      text-align: center
+
   &__links-list
     list-style: none
     margin: 0
     padding: 0
+
+    @media (max-width: 960px)
+      text-align: center
 
     @media (max-width: 620px)
       margin-bottom: 40px
@@ -75,6 +82,9 @@
   &__form-item
     width: 100%
     padding: 5px 0
+
+    @media (max-width: 960px)
+      text-align: center
 
   &__form-btn
     padding: 5px

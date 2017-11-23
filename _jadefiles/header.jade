@@ -1,40 +1,35 @@
-mixin nav-content()
-  ul.nav__list
-    li.nav__item
-      a.nav__link(href="#") link-Item
-    li.nav__item
-      a.nav__link(href="#") link-Item
-    li.nav__item
-      a.nav__link(href="#") link-Item
-    li.nav__item
-      a.nav__link(href="#") link-Item
-    li.nav__item
-      a.nav__link(href="#") link-Item
-
-  
-
-header.header
+header.header#home
   .header__bg-skew
     .header__bg-img
     
   .col-3.flex
     .header__logo-nav-wrap
-      a.header__logo(href="#") 
+      a.header__logo(href="#home") 
+        h1.element-invisible Ozi_Ocb Webstie
       
-      .hamburger
+      .hamburger(role="button" aria-label="menu" tabindex="0" aria-controls="main-menu")
         span.hamburger__bars
       
       nav.nav
-        +nav-content()
+        h2.element-invisible Main Navigation
+        ul.nav__list#main-menu
+          li.nav__item
+            a.nav__link(href="#home") home
+          li.nav__item
+            a.nav__link(href="#products") product range
+          li.nav__item
+            a.nav__link(href="#about") about us
+          li.nav__item
+            a.nav__link(href="#contact") contact us
       
       
     .header__title-wrap
-      h1.header__title  Lorem ipsum dolor sit
+      h2.header__title Welcome to our Website
       p.header__desc Lorem ipsum dolor sit amet, consectetur adipisicing consectetur adipisicing elit. Ratione autem, quam veniam iste officia dolores molestiae ut illum eligendi modi!Lorem ipsum dolor sit amet, consectetur adipisicing consectetur adipisicing elit. Ratione autem, quam veniam iste officia dolores molestiae ut illum eligendi modi!
   
     .header__cta-wrap
-      a.cta.col-1(href="#") Accept
-      a.cta.col-1.cta--red(href="#") Read More
-      a.cta.col-1.cta--orange(href="#") Read Even More
+      a.cta.col-1(href="https://example.net/comment.php" target="_blank") Accept
+      a.cta.col-1.cta--red(href="https://example.net/comment.php" target="_blank") Read More
+      a.cta.col-1.cta--orange(href="https://example.net/comment.php" target="_blank") Read Even More
 
   

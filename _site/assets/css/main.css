@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px; }
 
 .large, h2 {
-  font-size: 42px;
+  font-size: 52px;
   line-height: 1.14; }
 
 .bigger, h3 {
@@ -512,7 +512,8 @@ body {
     right: 0;
     left: 0;
     z-index: -1;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
     @media (max-width: 800px) {
       .header__bg-skew {
         -webkit-transform: skewY(-5deg);
@@ -642,7 +643,7 @@ body {
     font-weight: bold;
     border-top: 5px solid transparent;
     transition: .1s ease-in-out; }
-    .nav__link:hover, .nav__link :active {
+    .nav__link:hover, .nav__link:active, .nav__link:focus {
       color: #fff;
       text-decoration: underline;
       text-shadow: 0px 2px 6px rgba(255, 255, 255, 0.3);
@@ -1029,10 +1030,9 @@ body {
   width: 100%;
   background: #222;
   z-index: -1; }
-  .footer__title {
-    overflow: hidden;
-    text-indent: 101%;
-    white-space: nowrap; }
+  @media (max-width: 960px) {
+    .footer {
+      position: static; } }
   .footer__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1040,7 +1040,10 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 40px 0; }
+    padding: 60px 0; }
+    @media (max-width: 960px) {
+      .footer__wrapper {
+        padding: 50px 0 20px; } }
     @media (max-width: 620px) {
       .footer__wrapper {
         display: block;
@@ -1065,10 +1068,16 @@ body {
     color: #eee;
     margin-top: 0;
     font-size: 2rem; }
+    @media (max-width: 960px) {
+      .footer__links-title, .footer__form-title {
+        text-align: center; } }
   .footer__links-list {
     list-style: none;
     margin: 0;
     padding: 0; }
+    @media (max-width: 960px) {
+      .footer__links-list {
+        text-align: center; } }
     @media (max-width: 620px) {
       .footer__links-list {
         margin-bottom: 40px; } }
@@ -1089,6 +1098,9 @@ body {
   .footer__form-item {
     width: 100%;
     padding: 5px 0; }
+    @media (max-width: 960px) {
+      .footer__form-item {
+        text-align: center; } }
   .footer__form-btn {
     padding: 5px;
     background: #fff;
@@ -1109,9 +1121,9 @@ html {
 
 .main-wrapper {
   margin-bottom: 400px; }
-  @media (max-width: 620px) {
+  @media (max-width: 960px) {
     .main-wrapper {
-      margin-bottom: 700px; } }
+      margin-bottom: 0; } }
 
 .element-invisible {
   position: absolute !important;
