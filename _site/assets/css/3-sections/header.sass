@@ -1,0 +1,234 @@
+.header
+  color: #fff
+  position: relative
+  z-index: 1
+
+  //  =========== Header =========== Background  ===========
+  &__bg-skew
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: -1
+    overflow: hidden
+    box-shadow: $box-shadow
+
+    @media (max-width: 800px)
+      transform: skewY(-5deg)
+      transform-origin: top left
+
+  &__bg-img
+    width: 100%
+    height: 100%
+    background:
+      image: url("/assets/img/header-bg.jpg")
+      size: cover
+      repeat: no-repeat
+      position: center bottom
+
+    @media (max-width: 800px)
+      transform: skewY(5deg)
+      transform-origin: top left
+
+
+  //  =========== Header =========== Logo  ===========
+  &__logo-nav-wrap
+    display: flex
+    justify-content: space-between
+    margin-bottom: 120px
+
+    @media (max-width: 666px)
+      margin-top: 30px
+      margin-bottom: 60px
+
+  &__logo
+    color: #fff
+    flex: 1
+    min-width: 140px
+    height: 48px
+    margin-top: 30px
+    margin-left: 10px
+    background:
+      image: url("/assets/img/ocb-6.svg")
+      size: 140px
+      repeat: no-repeat
+      position: center top
+    transition: $basic-trans
+
+    &:hover
+      background-position: center bottom
+
+    @media (max-width: 666px)
+      height: 110px
+      margin-left: 0px
+      background:
+        size: 320px
+
+      &:hover
+        background-position: center top
+
+
+  //  =========== Header =========== Title / text  ===========
+  &__title-wrap
+    margin: 0px 10px 100px
+    text-align: center
+
+  &__title
+    color: #ccc
+    margin-bottom: 35px
+    padding-bottom: 35px
+    border-bottom: 2px solid #ddd
+
+
+  //  =========== Header =========== Buttons / CTA  ===========
+  &__cta-wrap
+    display: flex
+    justify-content: space-between
+    margin-bottom: 140px
+
+    @media (max-width: 800px)
+      flex-direction: column
+      transform: skewY(-5deg)
+      transform-origin: top left
+      margin-bottom: 50px
+
+      .col-1
+        max-width: 100%
+        margin-bottom: 15px
+
+        &:last-child
+          margin-bottom: 0
+
+
+
+// ========== Navigation ==========
+.nav
+  flex: 10
+  display: flex
+  justify-content: flex-end
+  z-index: 9999
+
+  @media (max-width: 666px)
+    position: fixed
+    bottom: 100%
+    left: 0
+    right: 0
+    display: none
+    transition: all .5s ease
+
+  &__list
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+
+    @media (max-width: 666px)
+      flex-direction: column
+      width: 100%
+      text-align: center
+
+  &__link
+    display: block
+    padding: 30px 15px 0
+    color: #fff
+    text-transform: uppercase
+    font-weight: bold
+    border-top: 5px solid transparent
+    transition: .1s ease-in-out
+
+    &:hover, &:active, &:focus
+      color: #fff
+      text-decoration: underline
+      text-shadow: 0px 2px 6px rgba(255,255,255,.3)
+      border-top: 5px solid white
+
+    @media (max-width: 666px)
+      font-size: 1.1rem
+      border-top: none
+      // border-bottom: 1px dashed rgba(255,255,255,.2)
+      padding: 22px 0
+      background-color: rgba(0,0,0,.9)
+
+      &:hover
+        border-top: none
+        // border-bottom: 1px dashed rgba(255,255,255,.2)
+        background-color: rgba(25,25,25,.9)
+        text-decoration: none
+
+
+
+// ========== Mobile Navigation Toggle ==========
+.hamburger
+  height: 50px
+  width: 50px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  position: fixed
+  top: 25px
+  right: 25px
+  background: rgba(0,0,0,.3)
+  border-radius: 5px
+  padding: 5px
+  z-index: 10000
+  transition: all .3s ease-in-out
+
+  @media (min-width: 667px)
+    display: none
+
+  &.open
+    background: rgba(255,255,255,.7)
+
+  &.open .hamburger__bars
+    background: transparent
+
+    &::before
+      transform: rotate(-225deg)
+      top: 0
+      background: #000
+
+    &::after
+      transform: rotate(225deg)
+      top: -4px
+      background: #000
+
+  &__bars
+    content: ""
+    display: block
+    height: 4px
+    background: #fff
+    position: relative
+    border-radius: 5px
+
+    transition: all .3s ease-in-out
+
+    &::before, &::after
+      content: ""
+      display: block
+      height: 4px
+      background: #fff
+      position: relative
+      border-radius: 5px
+      transition: all .3s ease-in-out
+
+    &::before
+      top: 10px
+
+    &::after
+      psition: absolute
+      top: -14px
+
+
+  // make navigation slide from the top
+  & + .nav
+    @media (max-width: 666px)
+      display: flex
+      transform: translateY(0)
+
+  &.open + .nav
+    @media (max-width: 666px)
+      display: flex
+      transform: translateY(100%)
+
+// ========== Mobile Navigation ==========
