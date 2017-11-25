@@ -1,4 +1,4 @@
 name: Ozi Ocb
 markdown: redcarpet
 exclude: ["node_modules", "gulpfile.js", "package.json"]
-baseurl: https://oziocb.github.io/18_elo/
+baseurl: "http://oziocb.github.io/18_elo/"
