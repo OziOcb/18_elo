@@ -852,7 +852,7 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
   .parallax__wrap {
     height: 300px;
-    background-image: url(/assets/img/parallax-bg.jpg);
+    background-image: url("../img/parallax-bg.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
