@@ -445,6 +445,11 @@ a {
 a:hover, a:focus {
   color: #666666; }
 
+a:focus {
+  outline: 5px solid rgba(0, 200, 200, 0.8);
+  outline-offset: 10px;
+  z-index: 9999; }
+
 ::-moz-selection {
   background: #FFF498; }
 
@@ -559,7 +564,7 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     transition: 0.3s ease-in-out; }
-    .header__logo:hover {
+    .header__logo:hover, .header__logo:focus {
       background-position: center bottom; }
     @media (max-width: 666px) {
       .header__logo {
@@ -780,16 +785,19 @@ body {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease-in-out; }
     @media (min-width: 961px) {
-      .product__item:hover {
+      .product__item:hover, .product__item:focus {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
-      .product__item:hover .product__img {
+      .product__item:hover .product__img,
+      .product__item:focus .product__img {
         -webkit-transform: scale(1.1);
                 transform: scale(1.1);
         -webkit-filter: blur(1px) grayscale(0.5);
                 filter: blur(1px) grayscale(0.5); }
-      .product__item:hover .product__name {
+      .product__item:hover .product__name,
+      .product__item:focus .product__name {
         left: 0; }
-      .product__item:hover .product__price {
+      .product__item:hover .product__price,
+      .product__item:focus .product__price {
         right: 0; } }
     @media (max-width: 620px) {
       .product__item {

@@ -17,7 +17,6 @@
     margin: 30px 10px 0
     border-bottom: 1px solid #333
 
-
   &__items-wrap
     // display: flex
     // flex-direction: column
@@ -45,18 +44,25 @@
     box-shadow: $box-shadow
     transition: $basic-trans
 
+    // &:focus
+    //   outline: 2px solid blue
+
     @media (min-width: 961px)
-      &:hover
+      &:hover,
+      &:focus
         box-shadow: $box-shadow--hover
 
-      &:hover .product__img
+      &:hover .product__img,
+      &:focus .product__img
         transform: scale(1.1)
         filter: blur(1px) grayscale(.5)
 
       &:hover .product__name,
+      &:focus .product__name
         left: 0
 
-      &:hover .product__price
+      &:hover .product__price,
+      &:focus .product__price
         right: 0
 
 
